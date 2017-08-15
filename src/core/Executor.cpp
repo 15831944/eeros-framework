@@ -274,8 +274,10 @@ void Executor::run() {
 		useDefaultExecutor = false;
 		
 		while (running) {
-			while (syncRosCallbackQueue->isEmpty() && running) usleep(1);
-			syncRosCallbackQueue->callAvailable();			
+// 			while (syncRosCallbackQueue->isEmpty() && running) usleep(1);
+// 			syncRosCallbackQueue->callAvailable();			
+// 			ros::topic::waitForMessage<std_msgs::Float64::Type>("rosNodeTalker/TestTopic1");
+// 			waitForTopic();
 			
 			counter.tick();
 			taskList.run();

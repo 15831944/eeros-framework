@@ -15,6 +15,8 @@
 
 #ifdef ROS_FOUND
 #include <ros/ros.h>
+#include <std_msgs/Float64.h>
+#include <sensor_msgs/BatteryState.h>
 #endif
 
 
@@ -59,6 +61,9 @@ namespace eeros {
 		bool useRosTime;
 		bool syncWithGazeboIsSet;
 		ros::CallbackQueue* syncRosCallbackQueue;
+		
+// 		void waitForTopic();
+		
 #endif
 		
 
