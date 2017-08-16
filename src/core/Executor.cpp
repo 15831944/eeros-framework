@@ -276,7 +276,7 @@ void Executor::run() {
 		while (running) {
 // 			while (syncRosCallbackQueue->isEmpty() && running) usleep(1);
 // 			syncRosCallbackQueue->callAvailable();			
-// 			ros::topic::waitForMessage<std_msgs::Float64::Type>("rosNodeTalker/TestTopic1");
+			ros::topic::waitForMessage<std_msgs::Float64::Type>("rosNodeTalker/TestTopic1");
 // 			waitForTopic();
 			
 			counter.tick();
